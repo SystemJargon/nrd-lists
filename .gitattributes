@@ -1,0 +1,9 @@
+# Format
+/nrd-list-32-days-agh.txt linguist-language=adblock linguist-detectable
+/nrd-list-7-days-agh.txt linguist-language=adblock linguist-detectable
+/nrd-threat-list-agh.txt linguist-language=adblock linguist-detectable
+/nrd-threat-list-hosts.txt linguist-language=hosts linguist-detectable
+/sources/blocklists/*.json linguist-language=JSON linguist-detectable
+
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
