@@ -1,0 +1,10 @@
+{
+   "name":"nrd-shrestait-1m - AdGuard format",
+   "sources":[
+      {
+         "source":"https://shreshtait.com/newly-registered-domains/nrd-1m",
+         "type":"adblock"
+      } 
+	],
+    "transformations": ["Compress","Validate","Deduplicate"]
+}
