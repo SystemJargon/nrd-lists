@@ -29,7 +29,10 @@ jobs:
       
     - name: Compile nrd-list-32-days-agh
       run: hostlist-compiler -c ./sources/blocklists/nrd-list-32-days-agh.json -o nrd-list-32-days-agh.txt
-             
+      
+    - name: Compile nrd-shrestait-1month
+      run: hostlist-compiler -c ./sources/blocklists/nrd-shreshtait-1m.json -o nrd-shrestait-1m.txt
+
     - name: Start commit change
       run: echo "MSG=Update filter list at $(date +"%Y%m%d")" >> $GITHUB_ENV
     
