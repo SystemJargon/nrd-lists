@@ -1,17 +1,22 @@
-A repo to aggregate lists from the below sources. Output to joint (or split) files which are AdGuard and domains (pi-hole) compatible.
+Aggregation of Newly Registered Domains (NRD) in AdGuard and pi-hole format
 
-Scheduled once a week on Sundays at midnight (UTC).
+contains output to joint (or split) files which are in AdGuard and/or domains format (pi-hole compatible).
 
-NRD = Newly Registered Domain
+Scheduled once a week to update at approx. midnight (UTC).
 
-Found this on Reddit [here](https://www.reddit.com/r/pihole/comments/yxxeo1/block_lists_for_security/)
+
+Note: Found this on Reddit.
+
+[here](https://www.reddit.com/r/pihole/comments/yxxeo1/block_lists_for_security/) and [here](https://www.reddit.com/r/pihole/comments/1akwk1p/newly_registered_domain_names_community_lists/)
 
 ----
 
+Sources 
+ 
 Domains - pi-hole:
 * https://dl.nrd-list.com/0/nrd-list-7-days.txt
 * https://dl.threat-list.com/0/domains.txt
-
+  
 Output to pi-hole compatible list
 
 ----
@@ -19,5 +24,6 @@ Output to pi-hole compatible list
 AdGuard: 
 * https://dl.nrd-list.com/1/nrd-list-7-days.txt
 * https://dl.threat-list.com/1/domains.txt
-
+* https://shreshtait.com/newly-registered-domains/nrd-1m (1 month, source in domain format)
+  
 Output to ad-guard compatible list
