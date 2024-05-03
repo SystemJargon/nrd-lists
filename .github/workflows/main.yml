@@ -1,0 +1,42 @@
+name: nrd-lists Aggregation List Compiler
+
+on:
+  schedule:
+     - cron: '0 0 * * MON'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@main
+    - uses: actions/setup-node@main
+      with:
+        node-version: '16'  
+    - run: npm i -g @adguard/hostlist-compiler
+    
+    - name: Compile combined-1m-adblock
+      run: hostlist-compiler -c ./sources/blocklists/nrd-1m-adblock.json -o nrd-1m-adblock.txt
+
+    - name: Compile combined-1m-hosts
+      run: hostlist-compiler -c ./sources/blocklists/nrd-1m-hosts.json -o nrd-1m-hosts.txt
+
+    - name: Start commit change
+      run: echo "MSG=Update filter list at $(date +"%Y%m%d")" >> $GITHUB_ENV
+    
+    - name: Commit changes
+      uses: EndBug/add-and-commit@main
+      with:
+        default_author: github_actions
+        message: ${{ env.MSG }}
+    
+    - name: Delete workflow runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        retain_days: 1
+        keep_minimum_runs: 1

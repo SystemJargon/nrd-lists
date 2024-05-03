@@ -1,0 +1,7 @@
+# Format
+/sources/blocklists/*.json linguist-language=JSON linguist-detectable
+/*-hosts.txt linguist-language=hosts linguist-detectable
+/*-adblock.txt linguist-language=adblock linguist-detectable
+
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
