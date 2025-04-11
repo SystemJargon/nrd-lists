@@ -6,7 +6,6 @@ These lists upon output, should work in the likes of AdGuardHome or Pi-Hole.
 
 ## Update
 
-Future updates of this list will be available on my [filters](https://github.com/SystemJargon/filters) repo.
+No longer maintained as of 04/2025.
 
-
-
+For a good repo with up to date lists for NRD, please visit [https://github.com/xRuffKez/NRD](https://github.com/xRuffKez/NRD)
